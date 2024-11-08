@@ -1,0 +1,136 @@
+
+ <!DOCTYPE html>
+   <html lang="pt-BR">
+   <head>
+       <title>Questão 1</title>
+       <meta charset = "UTF-8">
+       </head>
+       <header>
+       <h1>Perfil Pessoal</h1>
+       </header>
+       
+       <body>
+        <div class= "container">
+          <img src=>
+         </div>
+         
+         
+       <h2>Rodrigo</h2>  
+       <h4>Matrícula: 202403890615</h4>
+       <h3>Desenvolvedor Web</h3>
+    
+       
+       <p>
+        Meu Nome é Rodrigo Vasconcelos Oliveira Júnior, tenho 18 anos, moro no Barreto,Niterói sou apaixonado por computadores e tecnologia desde os 8 anos
+        e estou cursando Ciência da Computação com o foco de ser desenvolvedor web.
+        </p>
+      
+      
+      <h3 class="troca-h3">HTML</h3>
+      <h3 class="troca-h3">CSS</h3>
+      <h3 class="troca-h3">JavaScript</h3>
+      
+
+
+        <a 
+        href= "" target="_blank"> Linkedin<br>
+       </a> 
+       <a 
+        href= "https://github.com/RodrigoVasconcelos360" target="_blank"> GitHub<br>
+       </a>
+       <footer>
+       <p></p>
+       </footer>
+       </body>
+       
+
+       <style>
+     .container {
+        text-align: center;
+     }
+           
+    h1 {
+    background-color: #0000CD; 
+    color:#000000; 
+    font-weight: 500;
+    max-width:100%;
+    text-align: center;
+    margin: 18px auto;
+    padding: 20px;
+    font-family: Sans-serif;
+  }
+
+  h2{
+    color:#000000;
+    text-align: center;
+    font-family: Sans-serif;
+  }  
+
+  h3{
+    background-color: #B0E0E6; 
+    color:#000000; 
+    font-weight: 500;
+    max-width:100%;
+    text-align: center;
+    margin: 18px auto;
+    padding: 20px;
+    font-family: Sans-serif;
+  }
+
+    
+  }
+
+  .estilo-h4{
+    color:#FF0000; 
+    margin: 18px auto;
+    max-width:6%;
+    font-family: Sans-serif;
+    font-weight: 50;
+    border-radius: 50%;
+    border: 2px solid #B0E0E6;
+  }
+
+  h4{
+    color:#000000;
+    text-align: center;
+    font-family: Sans-serif;
+  }
+  
+    p {
+    color:#000000; 
+    font-weight: 500;
+    max-width:100%;
+    text-align: center; 
+    font-family: Sans-serif; 
+    font-size: 20px;
+  }
+
+body{
+    background-color:#d5cfcf ;
+     }
+
+img {
+    width: 250px;  
+    height: 250px;
+    border-radius: 50%;
+    border: 8px solid #0000CD;
+    }
+
+    a{
+    font-size: 18px;  
+    font-family: Sans-serif;
+    }
+
+    footer{
+    background-color: #0000CD;
+    color:
+    max-width:100%;
+    text-align: center;
+    margin: 15px auto;
+    padding: 5px;
+    font-family: Sans-serif;    
+    }
+       
+    </style>
+
+       
