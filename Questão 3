@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Contato</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 500px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+        }
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            
+        }
+        .local {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        textarea {
+            height: 100px;
+            resize: vertical;
+        }
+        button {
+            background-color: green;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+        button:hover {
+            background-color: #7CFC00;
+        }
+        #mensagem-resultado {
+            margin-top: 20px;
+            padding: 10px;
+            border-radius: 4px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Formulário de Contato</h2>
+        <form id="Contato" onsubmit="return validarFormulario(event)">
+            <div class="local">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" required>
+            </div>
+            <div class="local">
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+            </div>
+            <div class="local">
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" required></textarea>
+            </div>
+            <button type="submit">Enviar</button>
+        </form>
+        <div id="mensagem-resultado"></div>
+    </div>
+
+    <script>
+        function validarEmail(email) {
+            const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return regex.test(email);
+        }
+
+        function validarFormulario(event) {
+            event.preventDefault();
+            
+            const nome = document.getElementById('nome').value;
+            const email = document.getElementById('email').value;
+            const mensagem = document.getElementById('mensagem').value;
+            const resultado = document.getElementById('mensagem-resultado');
+
+            if (!nome || !email || !mensagem) {
+                resultado.style.display = 'block';
+                resultado.style.backgroundColor = '#ff6b6b';
+                resultado.textContent = 'Por favor, preencha todos os campos.';
+                return false;
+            }
+
+            if (!validarEmail(email)) {
+                resultado.style.display = 'block';
+                resultado.style.backgroundColor = '#ff6b6b';
+                resultado.textContent = 'Por favor, insira um email válido.';
+                return false;
+            }
+
+            resultado.style.display = 'block';
+            resultado.style.backgroundColor = '#90EE90';
+            resultado.textContent = 'Sucesso!';
+            document.getElementById('formContato').reset();
+            return false;
+        }
+    </script>
+</body>
+</html>
